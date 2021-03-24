@@ -1,0 +1,30 @@
+﻿@model InventorySystem.Models.Entities.Agent
+<nav id="sidebar">
+    <div class="ratio img-responsive img-circle" style="background-image: url(http://trovacamporella.com/img/trovacamporella-fiat500.png);"></div>
+    <div class="p-4">
+
+        <ul class="list-unstyled components mb-5">
+            <li class="active">
+                <a asp-controller="Agent" asp-action="ViewDetails"><span class="fa fa-home mr-3"></span> View Details</a>
+            </li>
+            <li>
+                <a asp-controller="Equipments" asp-action="Index"><span class="fa fa-user mr-3"></span> View Equipment</a>
+            </li>
+            <li>
+                <a asp-controller="Agent" asp-action="Create"><span class="fa fa-briefcase mr-3"></span> Add Agent</a>
+            </li>
+            <li>
+                <a asp-controller="Agent" asp-action="Index"><span class="fa fa-briefcase mr-3"></span> View Agents</a>
+            </li>
+            <li>
+                <a href="#"><span class="fa fa-suitcase mr-3"></span> Add Manager</a>
+            </li>
+            <br />
+            <li>
+                <a asp-controller="Agent" asp-action="LogOut"><span class="fa fa-briefcase mr-3"></span> LogOut</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
