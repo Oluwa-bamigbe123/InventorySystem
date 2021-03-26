@@ -65,6 +65,8 @@ namespace InventorySystem
             services.AddScoped<IManagerRepository, ManagerRepository>();
             services.AddScoped<IAgentService, AgentService>();
             services.AddScoped<IAgentRepository, AgentRepository>();
+            services.AddScoped<IEquipmentDistributionService, EquipmentDistributionService>();
+            services.AddScoped<IEquipmentDistribution, EquipmentDistributionRepository>();
 
 
 

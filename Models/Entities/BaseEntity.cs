@@ -10,5 +10,6 @@ namespace InventorySystem.Models.Entities
     {
         [Key]
         public int Id { get; set; }
+      
     }
 }

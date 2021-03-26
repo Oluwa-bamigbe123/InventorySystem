@@ -28,9 +28,14 @@ namespace InventorySystem.Domain.Services
             _agentRepository.DeleteAgent(id);
         }
 
+        public Agent FindById(int id)
+        {
+            return _agentRepository.FindById(id);
+        }
+
         public Agent FindByUserName(string userName)
         {
-            throw new NotImplementedException();
+          return  _agentRepository.FindByUserName(userName);
         }
 
         //public Agent FindByUserName(string userName)

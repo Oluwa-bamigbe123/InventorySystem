@@ -61,18 +61,14 @@ namespace InventorySystem.Migrations
                     b.Property<DateTime>("DateAssigned")
                         .HasColumnType("datetime");
 
-                    b.Property<int>("EquipmentGeneratedKey")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("EquipmentsId")
+                    b.Property<int>("EquipmentsId")
                         .HasColumnType("int");
 
                     b.Property<int>("ManagerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("NumberOfEquipmentAssigned")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -165,10 +161,12 @@ namespace InventorySystem.Migrations
                         .IsRequired();
 
                     b.HasOne("InventorySystem.Models.Equipments", "Equipments")
-                        .WithMany()
-                        .HasForeignKey("EquipmentsId");
+                        .WithMany("EquipmentDistribution")
+                        .HasForeignKey("EquipmentsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("InventorySystem.Models.Entities.Manager", "Mamager")
+                    b.HasOne("InventorySystem.Models.Entities.Manager", "Manager")
                         .WithMany("EquipmentDistribution")
                         .HasForeignKey("ManagerId")
                         .OnDelete(DeleteBehavior.Cascade)

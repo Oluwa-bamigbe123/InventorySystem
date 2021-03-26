@@ -18,15 +18,26 @@ namespace InventorySystem.Domain.Repository
 
         }
 
+        //public EquipmentDistribution AddDistribution(EquipmentDistribution distribution)
+        //{
+        //    _context.EquipmentDistribution.Add(distribution);
+        //    _context.SaveChanges();
+        //    return distribution;
+        //}
+
+        public EquipmentDistribution CreateDistribution(EquipmentDistribution equipmentDistribution)
+        {
+            _context.EquipmentDistribution.Add(equipmentDistribution);
+            _context.SaveChanges();
+            return equipmentDistribution;
+        }
+
         public EquipmentDistribution FindById(int id)
         {
             return _context.EquipmentDistribution.FirstOrDefault(i => i.Id == id);
         }
 
-        public EquipmentDistribution FindEquipmentGeneratedKey(int id)
-        {
-            return _context.EquipmentDistribution.FirstOrDefault(i => i.EquipmentGeneratedKey == id);
-        }
+       
 
         public List<EquipmentDistribution> GetAll()
         {
@@ -36,6 +47,13 @@ namespace InventorySystem.Domain.Repository
         public EquipmentDistribution GetDistribution(int id)
         {
             return _context.EquipmentDistribution.Find(id);
+        }
+
+        public EquipmentDistribution UpdateDistribution(EquipmentDistribution distribution)
+        {
+            _context.EquipmentDistribution.Update(distribution);
+            _context.SaveChanges();
+            return distribution;
         }
     }
 }

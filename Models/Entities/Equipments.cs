@@ -14,6 +14,7 @@ namespace InventorySystem.Models
             EquipmentDistribution = new List<EquipmentDistribution>();
 
         }
+     
 
         [Required]
         public string EquipmentName { get; set; }

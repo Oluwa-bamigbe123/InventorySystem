@@ -13,9 +13,11 @@ namespace InventorySystem.Interface.Repository
         public Equipments AddEquipment(Equipments equipments);
         public Equipments GetEquipments(int id);
         public Equipments FindById(int id);
+        public Equipments FindByEquipmentName(string equipmentName);
         public Equipments FindByProductId(int id);
         public void DeleteEquipment(int id);
         public List<Equipments> GetAll();
         public Equipments UpdateEquipments(Equipments equipments);
+       
     }
 }

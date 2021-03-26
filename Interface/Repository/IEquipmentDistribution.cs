@@ -8,10 +8,13 @@ namespace InventorySystem.Interface.Repository
 {
     public interface IEquipmentDistribution
     {
+
         public EquipmentDistribution GetDistribution(int id);
+        //public EquipmentDistribution AddDistribution(EquipmentDistribution distribution);
         public EquipmentDistribution FindById(int id);
-        public EquipmentDistribution FindEquipmentGeneratedKey(int id);
       
         public List<EquipmentDistribution> GetAll();
+        public EquipmentDistribution UpdateDistribution(EquipmentDistribution distribution);
+        public EquipmentDistribution CreateDistribution(EquipmentDistribution equipmentDistribution);
     }
 }

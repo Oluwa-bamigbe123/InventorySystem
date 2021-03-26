@@ -103,5 +103,66 @@ namespace InventorySystem.Controllers
             return View(agent);
 
         }
+        [Authorize(Roles = "Manager")]
+        [HttpGet]
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var agent = _agentService.GetAgent(id.Value);
+            if (agent == null)
+            {
+                return NotFound();
+            }
+            return View(agent);
+        }
+        [Authorize(Roles = "Manager")]
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+
+            _agentService.DeleteAgent(id);
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpGet]
+        [Authorize(Roles = "Manager")]
+        public IActionResult Details(int? id)
+        {
+            return View(_agentService.GetAgent(id.Value));
+        }
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var agent = _agentService.GetAgent(id.Value);
+            if (agent == null)
+            {
+                return NotFound();
+            }
+            return View(agent);
+        }
+        [HttpPost]
+        public IActionResult Edit(int id, Agent agent)
+        {
+            if (id != agent.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                _agentService.UpdateAgent(agent);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(agent);
+        }
+
     }
 }

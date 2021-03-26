@@ -3,6 +3,7 @@ using InventorySystem.Models;
 using InventorySystem.Models.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,5 +80,27 @@ namespace InventorySystem.Controllers
         {
             return View(_equipmentService.GetEquipments(id.Value));
         }
+        [HttpGet]
+        public IActionResult AddEquipment()
+        {
+            AddEquipmentVM addEquipmentVM = new AddEquipmentVM();
+
+            List<SelectListItem> EquipmentNameSelectList = new List<SelectListItem>();
+
+            List<Equipments> equipments = _equipmentService.GetAll();
+
+            foreach (var equipment in equipments)
+            {
+                EquipmentNameSelectList.Add(new SelectListItem
+                {
+                    Value = equipment.Id.ToString(),
+                    Text = equipment.EquipmentName
+                });
+            }
+            addEquipmentVM.EquipmentNameSelectList = EquipmentNameSelectList;
+
+            return View(addEquipmentVM);
+        }
+        
     }
 }

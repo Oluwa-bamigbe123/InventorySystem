@@ -13,7 +13,8 @@ namespace InventorySystem.Models.Entities
             EquipmentDistribution = new List<EquipmentDistribution>();
            
         }
-        [Required]
+
+       [Required]
        public string UserName { get; set; }
         [Required]
         [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}",
@@ -30,6 +31,8 @@ namespace InventorySystem.Models.Entities
         [Required]
         public string Address { get; set; }
         public IList<EquipmentDistribution> EquipmentDistribution { get; set; }
+        
+       
 
 
 

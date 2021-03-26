@@ -19,5 +19,6 @@ namespace InventorySystem.Interface.Repository
         public Agent FindByEmail(string email);
         public Agent GetAgentByEmail(string email);
         public Agent FindByUserName(string userName);
+      
     }
 }

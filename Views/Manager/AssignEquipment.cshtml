@@ -1,0 +1,34 @@
+﻿@model InventorySystem.Models.ViewModel.AssignEquipmentVM
+
+@{
+    Layout = "_DashboardLayout";
+    ViewData["pageTitle"] = "Assign Equipment";
+}
+<form method="post" asp-action="AssignEquipment">
+    <div class="form-group">
+        <label asp-for="AgentId" class="control-label">Select Agent</label>
+        <select asp-for="AgentId" asp-items="@Model.AgentNameSelectList" class="form-control">
+            <option disabled selected>--Select Agent--</option>
+        </select>
+        <span asp-validation-for="AgentId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EquipmentId" class="control-label">Select Equipment</label>
+        <select asp-for="EquipmentId" asp-items="@Model.EquipmentNameSelectList" class="form-control">
+            <option disabled selected>--Select Equipment--</option>
+        </select>
+        <span asp-validation-for="EquipmentId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NumberOfEquipmentAssigned"></label>
+        <input asp-for="NumberOfEquipmentAssigned" />
+        <span asp-validation-for="NumberOfEquipmentAssigned" class="text-danger"></span>
+
+    </div>
+   
+    <br />
+    <input type="submit" class="btn btn-primary" value="ASSIGN" />
+
+</form>
+
+

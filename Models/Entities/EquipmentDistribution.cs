@@ -10,20 +10,18 @@ namespace InventorySystem.Models.Entities
     {
      
         public Equipments Equipments { get; set; }
-        [Required]
-        public int EquipmentGeneratedKey { get; set; }
-        [Required]
-        public int EquipmentName { get; set; }
-    
-        public Manager Mamager { get; set; }
+        public int EquipmentsId { get; set; }
+        public Manager Manager { get; set; }
         [Required]
         public int ManagerId { get; set; }
         public Agent Agent { get; set; }
         [Required]
         public int AgentId { get; set; }
+  
         [Required]
         public DateTime DateAssigned { get; set; }
         [Required]
-        public string Status { get; set; }
+        public int NumberOfEquipmentAssigned { get; set; }
+   
     }
 }

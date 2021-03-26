@@ -18,6 +18,7 @@ namespace InventorySystem.Interface.Services
         public Agent GetAgentByEmail(string email);
 
         public Agent FindByUserName(string userName);
+        public Agent FindById(int id);
 
     }
 }

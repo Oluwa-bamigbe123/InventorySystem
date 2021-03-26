@@ -47,6 +47,11 @@ namespace InventorySystem.Domain.Repository
             _context.SaveChanges();
         }
 
+        public Equipments FindByEquipmentName(string equipmentName)
+        {
+            return _context.Equipments.FirstOrDefault(eq => eq.EquipmentName == equipmentName);
+        }
+
         public Equipments FindById(int id)
         {
             return _context.Equipments.FirstOrDefault(i => i.Id == id);

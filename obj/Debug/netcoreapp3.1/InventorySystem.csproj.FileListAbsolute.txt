@@ -40,7 +40,6 @@ C:\Users\Laptop City\source\repos\InventorySystem\bin\Debug\netcoreapp3.1\System
 C:\Users\Laptop City\source\repos\InventorySystem\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Laptop City\source\repos\InventorySystem\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Laptop City\source\repos\InventorySystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\InventorySystem.csprojAssemblyReference.cache
 C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\InventorySystem.AssemblyInfoInputs.cache
 C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\InventorySystem.AssemblyInfo.cs
 C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\InventorySystem.csproj.CoreCompileInputs.cache
@@ -160,3 +159,8 @@ C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\Razor\
 C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_agentSideDashboard.cshtml.g.cs
 C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AgentDashboardLayout.cshtml.g.cs
 C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\Razor\Views\Agent\ViewDetails.cshtml.g.cs
+C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\Razor\Views\Agent\Delete.cshtml.g.cs
+C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\Razor\Views\Agent\Details.cshtml.g.cs
+C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\Razor\Views\Agent\Edit.cshtml.g.cs
+C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\Razor\Views\Manager\AssignEquipment.cshtml.g.cs
+C:\Users\Laptop City\source\repos\InventorySystem\obj\Debug\netcoreapp3.1\InventorySystem.csprojAssemblyReference.cache
